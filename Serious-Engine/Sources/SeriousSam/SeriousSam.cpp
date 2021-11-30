@@ -1235,6 +1235,7 @@ void setControls(PlayerControls &ctrls) {
 
     PlayerControls &playerCtrl = *(PlayerControls *) _pGame->gm_lpLocalPlayers[0].lp_ubPlayerControlsState;
     playerCtrl = ctrls;
+    playerCtrl.bTurnBankingLeft = playerCtrl.bTurnBankingRight = false;
 
     for (int i = 0; i < 10; i++) {
       playerCtrl.axisValue[i] += ctrls.shiftAxisValue[i];
